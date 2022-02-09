@@ -15,7 +15,7 @@ fi
 
 docker exec -d alpcon git clone https://github.com/gavrield/DockerProject.git;
 sleep 2;
-docker exec -d alpcon python3 /DockerProject/print_and_wait.py";
+docker exec -d alpcon python3 /DockerProject/print_and_wait.py;
 sleep 10;
 PID=$(docker top alpcon | grep python3 | awk '{print $2}');
 if [[ ! -z $PID ]]; then
